@@ -1,0 +1,27 @@
+-------
+Phase 1 (2/2)
+-------
+(1) Doesn't assert protocol error when a start then start is sent
+(2) Doesn't ignore inputs between done->start
+-------
+Phase 2 (2/2)
+-------
+(1) stackOverflow asserted when stack size is 8 rather than at 9, then gets
+stuck at 1
+(2) protocolError stuck at 0. Does not assert when pop with insufficient elems
+or when stack is empty in the middle of start->done 
+-------
+Phase 3 (1/1)
+-------
+(1) Fill up stack, add them all up, the aggregated sum is wrong
+-------
+Phase 4 (2/2)
+-------
+(1) Addition is incorrect, top four bits are 1 less than the actual answer
+(2) Swap decrements the stack size
+-------
+Phase 5 (3/3)
+-------
+(1) Correct is stuck at 0
+(2) Only asserts protocolError for one cycle does not when pop with no elems
+(3) dataOverflow stuck at 0
